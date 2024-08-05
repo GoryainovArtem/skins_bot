@@ -4,7 +4,6 @@ from aiogram.filters import Command
 
 from managers import api_manager
 
-
 deal_router = Router()
 
 

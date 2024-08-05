@@ -7,15 +7,15 @@ from aiogram.client.bot import DefaultBotProperties
 
 from config import access_token
 from routers.common_router import user_private_router
-from routers.store_router import store_router
-from routers.library_router import library_router
+# from app.routers.store_router import store_router
+# from app.routers.library_router import library_router
 from common.bot_cmd import private_cmds
 
 
 dp = Dispatcher()
 dp.include_router(user_private_router)
-dp.include_router(store_router)
-dp.include_router(library_router)
+# dp.include_router(store_router)
+# dp.include_router(library_router)
 
 
 async def main():

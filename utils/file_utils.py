@@ -1,6 +1,6 @@
-def read_html_file(file_path: str):
+def read_html_file(file_path: str, mode):
     """Получить содержимое html файла."""
-    with open(file_path, "r", encoding='utf-8') as file:
+    with open(file_path, mode) as file:
         content = file.read()
         return content
 

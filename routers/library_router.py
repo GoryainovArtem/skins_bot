@@ -3,11 +3,7 @@ from aiogram.filters import Command
 from aiogram import types
 
 from managers import api_manager
-from utils.file_utils import read_html_file
-from utils.message_templates import card_content
 from keyboards.pagination_keyboard import pagination_kb
-from keyboards.reply import del_kb
-from keyboards.library_keyboard import detailed_kb
 
 library_router = Router()
 

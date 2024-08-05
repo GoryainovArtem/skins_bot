@@ -1,9 +1,6 @@
 from aiogram import Router, types
 from aiogram.filters import Command
 
-from managers import api_manager
-
-
 store_router = Router()
 
 
