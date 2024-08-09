@@ -1,5 +1,7 @@
 from aiogram import types, Router
-from aiogram.filters import CommandStart
+from aiogram.filters import CommandStart, Command
+from aiogram.utils.keyboard import InlineKeyboardBuilder
+
 
 # from ..keyboards.reply import store_kb, deals_kb, del_kb
 # from app.keyboards.common_keyboard import item_type_select_kb
@@ -24,6 +26,16 @@ async def user_menu(callback: types.CallbackQuery, callback_data: MenuCallBack):
     await callback.message.edit_media(media, reply_markup=reply_markup)
     await callback.answer()
 
+
+@user_private_router.message(Command("info", prefix="!/"))
+async def cmd_info_handler(message: types.Message):
+    tg_channel_button = types.InlineKeyboardButton(text="Кнопка 1",
+                                                   url="https://www.youtube.com")
+    row = [tg_channel_button]
+    rows = [row]
+    markup = types.InlineKeyboardMarkup(inline_keyboard=rows)
+    await message.answer(text="Ссылки и прочие ресурсы",
+                         reply_markup=markup)
 
 # @user_private_router.message(CommandStart())
 # async def command_start_handler(message: types.Message) -> None:

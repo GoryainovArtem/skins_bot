@@ -7,6 +7,7 @@ from typing import Sequence
 from config import service_host, service_port
 from keyboards.inline import get_library_card_buttons
 
+
 def get_api_skins_list():
     url = f"http://{service_host}:{service_port}/skins/"
     response = requests.get(url, headers={"accept": "application/json"})
